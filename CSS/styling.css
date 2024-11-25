@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url(bg\ kalkulator.jpg);
+    display: flex;
+    /* Menambahkan display flex */
+    flex-direction: column;
+    animation: fadeInBg 2s ease-in-out;
+}
+
+header {
+    background: #2d87f0;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    animation: slideDown 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5em;
+    animation: fadeIn 2s;
+    margin-bottom: 0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.member {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Menambahkan transisi untuk box-shadow */
+    height: 370px;
+    /* Menetapkan tinggi yang konsisten */
+    width: 200px;
+    /* Menetapkan lebar yang konsisten */
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.member h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Menambahkan bayangan yang lebih kuat saat hover */
+    background: #f0f8ff;
+    /* Mengubah warna latar belakang saat hover */
+}
+
+/* Penataan untuk link Instagram */
+a {
+    display: inline-block; /* Agar gambar berfungsi seperti tombol */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
+
+/* Penataan gambar Instagram */
+a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%; /* Menjadikan gambar berbentuk bulat */
+}
+
+/* Efek saat hover */
+a:hover img {
+    transform: scale(1.2); /* Membesarkan gambar saat kursor menyentuh */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+}
+
+/* Efek saat link Instagram di-hover */
+a:hover {
+    transform: scale(1.05); /* Sedikit memperbesar link secara keseluruhan */
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #2d87f0;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
